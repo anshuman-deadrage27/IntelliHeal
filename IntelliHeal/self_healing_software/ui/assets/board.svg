@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <style>
+    .card { fill:#f3f6fb; stroke:#0b1220; stroke-width:1.0; rx:6; ry:6; }
+    .label { font-family:Arial, sans-serif; font-size:12px; fill:#07102b; }
+    .idtxt { font-family:Arial, sans-serif; font-size:11px; fill:#4b5563; }
+    .wire { stroke:#023e8a; stroke-width:2; fill:none; stroke-linecap:round; }
+  </style>
+
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <text x="20" y="30" class="label" style="font-size:18px">IntelliHeal — Demo Board Schematic</text>
+
+  <!-- Power connector -->
+  <g id="J_PWR">
+    <rect x="30" y="60" width="140" height="40" class="card"/>
+    <text x="100" y="86" class="label" text-anchor="middle">J_PWR</text>
+    <text x="100" y="72" class="idtxt" text-anchor="middle">tile_0</text>
+    <line x1="170" y1="80" x2="260" y2="80" class="wire"/>
+  </g>
+
+  <!-- Voltage regulator -->
+  <g id="VR_REG">
+    <rect x="260" y="50" width="140" height="80" class="card"/>
+    <text x="330" y="80" class="label" text-anchor="middle">VR_REG</text>
+    <text x="330" y="66" class="idtxt" text-anchor="middle">VR_REG</text>
+    <line x1="400" y1="90" x2="480" y2="90" class="wire"/>
+  </g>
+
+  <!-- Clock generator -->
+  <g id="CLK_GEN">
+    <rect x="260" y="150" width="140" height="60" class="card"/>
+    <text x="330" y="180" class="label" text-anchor="middle">CLK_GEN</text>
+    <text x="330" y="166" class="idtxt" text-anchor="middle">CLK_GEN</text>
+    <line x1="400" y1="180" x2="560" y2="180" class="wire"/>
+    <text x="480" y="170" class="label">100 MHz</text>
+  </g>
+
+  <!-- ADC Frontend -->
+  <g id="ADC_FRONTEND">
+    <rect x="30" y="150" width="220" height="140" class="card"/>
+    <text x="140" y="180" class="label" text-anchor="middle">ADC Frontend</text>
+    <text x="140" y="166" class="idtxt" text-anchor="middle">ADC_FRONTEND</text>
+    <rect x="50" y="220" width="40" height="24" fill="#e8f1ff" stroke="#0b1220" rx="4" ry="4"/>
+    <text x="70" y="237" class="label" text-anchor="middle">J_SIG</text>
+    <line x1="250" y1="220" x2="560" y2="180" class="wire"/>
+  </g>
+
+  <!-- FPGA core -->
+  <g id="FPGA_CORE">
+    <rect x="560" y="120" width="360" height="420" class="card"/>
+    <text x="740" y="145" class="label" text-anchor="middle">FPGA - Reconfigurable Fabric</text>
+    <text x="740" y="132" class="idtxt" text-anchor="middle">FPGA_CORE</text>
+
+    <!-- internal blocks -->
+    <rect id="FFT" x="600" y="190" width="140" height="80" fill="#ffffff" stroke="#0b1220" rx="6"/>
+    <text x="670" y="235" class="label" text-anchor="middle">FFT</text>
+    <text x="670" y="220" class="idtxt" text-anchor="middle">FFT</text>
+
+    <rect id="FILTER" x="780" y="190" width="140" height="80" fill="#ffffff" stroke="#0b1220" rx="6"/>
+    <text x="850" y="235" class="label" text-anchor="middle">FILTER</text>
+    <text x="850" y="220" class="idtxt" text-anchor="middle">FILTER</text>
+
+    <rect id="DETECT" x="600" y="290" width="140" height="80" fill="#ffffff" stroke="#0b1220" rx="6"/>
+    <text x="670" y="335" class="label" text-anchor="middle">DETECT</text>
+    <text x="670" y="320" class="idtxt" text-anchor="middle">DETECT</text>
+
+    <rect id="MUX" x="780" y="290" width="140" height="80" fill="#ffffff" stroke="#0b1220" rx="6"/>
+    <text x="850" y="335" class="label" text-anchor="middle">MUX</text>
+    <text x="850" y="320" class="idtxt" text-anchor="middle">MUX</text>
+
+    <!-- spares -->
+    <rect id="SPARE_A" x="700" y="400" width="80" height="50" fill="#fff" stroke="#0b1220" rx="6"/>
+    <text x="740" y="425" class="label" text-anchor="middle">SPARE_A</text>
+    <text x="740" y="410" class="idtxt" text-anchor="middle">SPARE_A</text>
+
+    <rect id="SPARE_B" x="820" y="400" width="80" height="50" fill="#fff" stroke="#0b1220" rx="6"/>
+    <text x="860" y="425" class="label" text-anchor="middle">SPARE_B</text>
+    <text x="860" y="410" class="idtxt" text-anchor="middle">SPARE_B</text>
+  </g>
+
+  <!-- DAC -->
+  <g id="DAC_TX">
+    <rect x="560" y="560" width="220" height="80" class="card"/>
+    <text x="670" y="590" class="label" text-anchor="middle">DAC / TX</text>
+    <text x="670" y="576" class="idtxt" text-anchor="middle">DAC_TX</text>
+  </g>
+
+  <!-- SPI & sensors -->
+  <g id="SPI_CTRL">
+    <rect x="860" y="560" width="220" height="80" class="card"/>
+    <text x="970" y="590" class="label" text-anchor="middle">SPI_CTRL</text>
+    <text x="970" y="576" class="idtxt" text-anchor="middle">SPI_CTRL</text>
+  </g>
+
+  <g id="THERM_SENSOR">
+    <rect x="860" y="440" width="220" height="60" class="card"/>
+    <text x="970" y="470" class="label" text-anchor="middle">THERM_SENSOR</text>
+    <text x="970" y="456" class="idtxt" text-anchor="middle">THERM_SENSOR</text>
+  </g>
+
+  <g id="DEBUG_UART">
+    <rect x="860" y="360" width="220" height="60" class="card"/>
+    <text x="970" y="390" class="label" text-anchor="middle">DEBUG_UART</text>
+    <text x="970" y="376" class="idtxt" text-anchor="middle">DEBUG_UART</text>
+  </g>
+
+  <!-- small components -->
+  <rect id="R1" x="320" y="340" width="60" height="20" fill="#fff" stroke="#000"/>
+  <text x="350" y="355" class="idtxt" text-anchor="middle">R1</text>
+
+  <circle id="Q1" cx="420" cy="350" r="12" fill="#fff" stroke="#000"/>
+  <text x="420" y="355" class="idtxt" text-anchor="middle">Q1</text>
+
+  <rect id="C1" x="460" y="328" width="6" height="40" fill="#fff" stroke="#000"/>
+  <text x="490" y="355" class="idtxt">C1</text>
+
+  <!-- connections -->
+  <path d="M480 180 L560 180" class="wire"/>
+  <path d="M560 220 L600 220" class="wire"/>
+  <path d="M680 270 L780 270" class="wire"/>
+  <path d="M840 320 L860 320 L860 360" class="wire"/>
+  <path d="M740 480 L740 560" class="wire"/>
+
+  <!-- legend -->
+  <g transform="translate(20,630)">
+    <rect x="0" y="0" width="1160" height="58" rx="8" fill="#fbfdff" stroke="#e6eef7"/>
+    <text x="12" y="20" class="label">Legend: Click any component to select. Component IDs (examples): ADC_FRONTEND, FPGA_CORE, FFT, FILTER, MUX, SPARE_A, SPARE_B, DAC_TX, SPI_CTRL, THERM_SENSOR, DEBUG_UART, R1, Q1, C1</text>
+  </g>
+</svg>

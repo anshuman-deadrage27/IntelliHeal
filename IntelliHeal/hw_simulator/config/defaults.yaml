@@ -1,0 +1,7 @@
+heartbeat_interval: 0.1    # seconds between aggregated heartbeats
+tile_heartbeat: 0.005      # per-tile internal heartbeat (not used directly)
+warm_swap_ms: 5.0
+cold_pr_ms_per_kb: 2.0
+pr_failure_rate: 0.02
+thermal_base: 40.0
+tick_interval: 0.05

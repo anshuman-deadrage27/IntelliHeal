@@ -1,0 +1,10 @@
+{
+  "mapping": {
+    "missing_heartbeat": "spare_1",
+    "error_count_exceeded": "spare_2",
+    "stuck_at_1": "spare_3"
+  },
+  "meta": {
+    "trained_on": "simulated_data_v1"
+  }
+}

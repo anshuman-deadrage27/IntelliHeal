@@ -1,0 +1,18 @@
+{
+  "tile_0": {"function":"rx_frontend","bitstream_kb":40},
+  "tile_1": {"function":"filter_1","bitstream_kb":30},
+  "tile_2": {"function":"fft_1","bitstream_kb":64},
+  "tile_3": {"function":"detector","bitstream_kb":50},
+  "tile_4": {"function":"comm_mux","bitstream_kb":20},
+  "tile_5": {"function":"tx_frontend","bitstream_kb":40},
+  "tile_6": {"function":"filter_2","bitstream_kb":30},
+  "tile_7": {"function":"fft_2","bitstream_kb":64},
+  "tile_8": {"function":"misc_1","bitstream_kb":16},
+  "tile_9": {"function":"misc_2","bitstream_kb":16},
+  "tile_10": {"function":"spare","bitstream_kb":10},
+  "tile_11": {"function":"spare","bitstream_kb":10},
+  "tile_12": {"function":"spare","bitstream_kb":10},
+  "tile_13": {"function":"spare","bitstream_kb":10},
+  "tile_14": {"function":"spare","bitstream_kb":10},
+  "tile_15": {"function":"spare","bitstream_kb":10}
+}

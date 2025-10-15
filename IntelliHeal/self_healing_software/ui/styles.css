@@ -1,0 +1,263 @@
+:root {
+    --accent: #1f6feb;
+    --muted: #6b7280;
+    --bg: #fff;
+    --panel-bg: #fbfdff;
+    --card-border: #e6eef7;
+    --ok: #22c55e;
+    --warn: #f59e0b;
+    --fail: #ef4444;
+    --spare: #6366f1;
+    --text: #0f172a;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg)
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    background: linear-gradient(90deg, #0b3d66, #1f6feb);
+    color: white
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 20px
+}
+
+.subtitle {
+    font-size: 12px;
+    opacity: .95;
+    margin-top: 4px
+}
+
+.small-note {
+    font-size: 12px;
+    color: #dbeafe
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 16px;
+    padding: 16px;
+    align-items: start;
+    max-width: 1400px;
+    margin: 0 auto
+}
+
+.panel {
+    border-radius: 8px;
+    background: var(--panel-bg);
+    border: 1px solid var(--card-border);
+    padding: 12px
+}
+
+.board-panel {
+    min-height: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.board-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 6px;
+    overflow: auto;
+    padding: 8px
+}
+
+.board-wrapper object,
+.board-wrapper svg {
+    width: 100%;
+    height: 100%;
+    max-height: 520px;
+    border: 1px solid #d0d7e6
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative
+}
+
+.controls-card,
+.charts-card,
+.process-card,
+.log-card {
+    padding: 10px;
+    border-radius: 6px;
+    background: #fff;
+    border: 1px solid #eef2ff
+}
+
+.row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 8px
+}
+
+.row.two-cols {
+    display: flex;
+    gap: 8px
+}
+
+label {
+    font-size: 13px;
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    gap: 6px
+}
+
+select,
+button,
+input[type="range"] {
+    font-size: 13px;
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #dbe7ff;
+    background: white
+}
+
+.primary-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer
+}
+
+.primary-btn:hover {
+    filter: brightness(.95)
+}
+
+.scenario-row {
+    display: flex;
+    gap: 8px;
+    margin-top: 6px
+}
+
+.scenario-row button {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #dbe7ff;
+    background: white;
+    cursor: pointer
+}
+
+.scenario-row button:hover {
+    background: #f1f5ff
+}
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px
+}
+
+.chart-canvas {
+    width: 100%;
+    height: 150px;
+    background: transparent;
+    border: 1px dashed #eef2ff;
+    border-radius: 6px;
+    padding: 6px
+}
+
+#proc-status {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--muted)
+}
+
+#proc-progress-container {
+    width: 100%;
+    height: 12px;
+    background: #eef2ff;
+    border-radius: 8px;
+    overflow: hidden
+}
+
+#proc-progress {
+    height: 100%;
+    width: 0%;
+    background: var(--accent);
+    transition: width 0.2s linear
+}
+
+.log-panel {
+    height: 180px;
+    overflow: auto;
+    background: #0b1220;
+    color: #a7f3d0;
+    font-family: monospace;
+    font-size: 12px;
+    padding: 8px;
+    border-radius: 6px
+}
+
+.status-ok {
+    fill: var(--ok) !important;
+    stroke: #065f46 !important;
+    stroke-width: 1.2px
+}
+
+.status-degraded {
+    fill: var(--warn) !important;
+    stroke: #92400e !important;
+    stroke-width: 1.2px
+}
+
+.status-failed {
+    fill: var(--fail) !important;
+    stroke: #7f1d1d !important;
+    stroke-width: 1.2px
+}
+
+.status-spare {
+    fill: var(--spare) !important;
+    stroke: #2b1fa3 !important;
+    stroke-width: 1.2px
+}
+
+.highlight {
+    stroke: #ffd60a !important;
+    stroke-width: 2.5px !important;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.12))
+}
+
+.log-entry {
+    margin-bottom: 6px
+}
+
+@media (max-width:1100px) {
+    .layout {
+        grid-template-columns: 1fr;
+        padding: 12px
+    }
+
+    .chart-canvas {
+        height: 120px
+    }
+}
